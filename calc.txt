@@ -1,0 +1,1671 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#define PI 3.141592
+#include <string.h>
+#include <conio.h>
+#include <time.h>
+void mps_to_kph()
+{
+    float convert_number;
+    printf("\nMps: ");
+    scanf("%f", &convert_number);
+    printf("\nKph = %.3f\n", (convert_number * 3.60));
+}
+
+void mps_to_miph()
+{
+    float convert_number;
+    printf("\nMps: ");
+    scanf("%f", &convert_number);
+    printf("\nMiph : %.3f\n", (convert_number * 2.24));
+}
+void kph_to_mps()
+{
+    float convert_number;
+    printf("\nKph: ");
+    scanf("%f", &convert_number);
+    printf("\nMps : %.3f\n", (convert_number * 0.28));
+}
+
+void kph_to_miph()
+{
+    float convert_number;
+    printf("\nKph: ");
+    scanf("%f", &convert_number);
+    printf("\nMiph : %.3f\n", (convert_number * 0.62));
+}
+
+void miph_to_mps()
+{
+    float convert_number;
+    printf("\nMiph: ");
+    scanf("%f", &convert_number);
+    printf("\nMps : %.3f\n", (convert_number * 0.45));
+}
+
+void miph_to_kph()
+{
+    float convert_number;
+    printf("\nMiph: ");
+    scanf("%f", &convert_number);
+    printf("\nKph : %.3f\n", (convert_number * 1.61));
+}
+void speed()
+{
+    int speed_num;
+    while (1)
+    {
+        printf("\n1. Meters per Second to Kilometers per Hour\n2.Meters per Second to Miles per Hour\n3.Kilometers per Hour to Meters per Second\n4.Kilometers per Hour to Miles per Hour\n5.Miles per Hour to Meters per Second\n6.Miles per Hour to Kilometers per Hour\n7.Main menu\n8.Exit\n");
+        printf("\nEnter your choice: ");
+        scanf("%d", &speed_num);
+        switch (speed_num)
+        {
+        case 1:
+            mps_to_kph();
+            break;
+        case 2:
+            mps_to_miph();
+            break;
+        case 3:
+            kph_to_mps();
+            break;
+        case 4:
+            kph_to_miph();
+            break;
+        case 5:
+            miph_to_mps();
+            break;
+        case 6:
+            miph_to_kph();
+            break;
+        case 7:
+            main();
+            break;
+        case 8:
+            exit(0);
+            break;
+        default:
+            printf("\nInvalid choice\n");
+        }
+    }
+}
+
+void j_to_kw()
+{
+    float convert_number;
+    printf("\nJoules    : ");
+    scanf("%f", &convert_number);
+    printf("Kilowatts : %.10f\n", convert_number / 3600000);
+}
+
+void j_to_kj()
+{
+    float convert_number;
+    printf("\nJoules     : ");
+    scanf("%f", &convert_number);
+    printf("KiloJoules : %.3f\n\n", convert_number / 1000);
+}
+
+void kw_to_j()
+{
+    float convert_number;
+    printf("\nKilowatts : ");
+    scanf("%f", &convert_number);
+    printf("Joules    : %10.f\n\n", 3600000 * convert_number);
+}
+
+void kw_to_kj()
+{
+    float convert_number;
+    printf("\nKilowatts  : ");
+    scanf("%f", &convert_number);
+    printf("Kilojoules : %.3f\n\n", convert_number * 3600);
+}
+
+void kj_to_j()
+{
+    float convert_number;
+    printf("\nKilojoules : ");
+    scanf("%f", &convert_number);
+    printf("Joules     : %.3f\n\n", convert_number * 1000);
+}
+
+void kj_to_kw()
+{
+    float convert_number;
+    printf("\nKilojoules : ");
+    scanf("%f", &convert_number);
+    printf("Kilowatts  : %f\n\n", convert_number / 3600);
+}
+void energy()
+{
+    int energy_number;
+    while (1)
+    {
+        printf("\n1.Joules to Kilowatts\n2.Joules to Kilojoules\n3.Kilowatts to Joules\n4.Kilowatts to Kilojoules\n5.Kilojoules to Joules\n6.Kilojoules to Kilowatts\n7.Main menu\n8.Exit\n");
+        printf("\nEnter your choice: ");
+        scanf("%d", &energy_number);
+        switch (energy_number)
+        {
+        case 1:
+            j_to_kw();
+            break;
+        case 2:
+            j_to_kj();
+            break;
+        case 3:
+            kw_to_j();
+            break;
+        case 4:
+            kw_to_kj();
+            break;
+        case 5:
+            kj_to_j();
+            break;
+        case 6:
+            kj_to_kw();
+            break;
+        case 7:
+            main();
+            break;
+        case 8:
+            exit(0);
+            break;
+        default:
+            printf("Invalid choice");
+        }
+    }
+}
+
+void time_conv()
+{
+    int time_number;
+    float convert_number;
+    while (1)
+    {
+        printf("\n1.Seconds to Minutes\n2.Seconds to Hours\n3.Minutes to Seconds\n4.Minutes to Hours\n5.Hours to Seconds\n6.Hours to Minutes\n7.Main menu\n8.Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &time_number);
+        switch (time_number)
+        {
+        case 1:
+            printf("\nSeconds : ");
+            scanf("%f", &convert_number);
+            printf("Minutes : %.2f\n\n", convert_number / 60);
+            break;
+        case 2:
+            printf("\nSeconds : ");
+            scanf("%f", &convert_number);
+            printf("Hours   : %.5f\n\n", convert_number / 3600);
+
+            break;
+        case 3:
+            printf("\nMinutes : ");
+            scanf("%f", &convert_number);
+            printf("Seconds : %.2f\n\n", 60 * convert_number);
+            break;
+        case 4:
+            printf("\nMinutes : ");
+            scanf("%f", &convert_number);
+            printf("Hours   : %.2f\n\n", convert_number / 60);
+            break;
+        case 5:
+            printf("\nHours   : ");
+            scanf("%f", &convert_number);
+            printf("Seconds : %.2f\n\n", convert_number * 3600);
+            break;
+        case 6:
+            printf("\nHours   : ");
+            scanf("%f", &convert_number);
+            printf("Minutes : %.2f\n\n", convert_number * 60);
+            break;
+
+        case 7:
+            main();
+            break;
+        case 8:
+            exit(0);
+            break;
+        default:
+            printf("Invalid choice\n");
+        }
+    }
+}
+void mass()
+{
+    int mass_number;
+    float convert_number;
+    while (1)
+    {
+        printf("\n1.Centigram to Gram\n2.Centigram to Kilogram\n3.Gram to Centigram\n4.Gram to Kilogram\n5.Kilogram to Centigram\n6.Kilogram to Gram\n7.Kilogram to Pound\n8.Pound to Kilogram\n9.Main menu\n10.Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &mass_number);
+        switch (mass_number)
+        {
+        case 1:
+            printf("\nCentigram : ");
+            scanf("%f", &convert_number);
+            printf("Gram : %.3f\n", convert_number / 100);
+            break;
+        case 2:
+            printf("\nCentigram : ");
+            scanf("%f", &convert_number);
+            printf("Kilogram  : %.3f\n", convert_number / 1000);
+            break;
+        case 3:
+            printf("\nGram : ");
+            scanf("%f", &convert_number);
+            printf("Centigram : %.3f\n", convert_number * 100);
+            break;
+        case 4:
+            printf("\nGram : ");
+            scanf("%f", &convert_number);
+            printf("Kilogram : %.3f\n", convert_number / 100);
+            break;
+        case 5:
+            printf("\nKilogram : ");
+            scanf("%f", &convert_number);
+            printf("Centigram : %.3f\n", convert_number * 1000);
+            break;
+        case 6:
+            printf("\nKilogram : ");
+            scanf("%f", &convert_number);
+            printf("Gram : %.3f\n", convert_number * 1000);
+            break;
+
+        case 7:
+            printf("\n kilogram : ");
+            scanf("%f", &convert_number);
+            printf("pound :%.3f\n", convert_number * 2.20462);
+            break;
+
+        case 8:
+            printf("\n pound : ");
+            scanf("%f", &convert_number);
+            printf("kilogram :%.3f\n", convert_number * 0.453592);
+            break;
+        case 9:
+            main();
+            break;
+        case 10:
+            exit(0);
+        default:
+            printf("Invalid choice\n");
+        }
+    }
+}
+void cm_to_m()
+{
+    float convert_number;
+    printf("\nCentimeter : ");
+    scanf("%f", &convert_number);
+    printf("Meter : %.3f\n", convert_number / 100);
+    return;
+}
+
+void cm_to_km()
+{
+    float convert_number;
+    printf("\nCentimeter : ");
+    scanf("%f", &convert_number);
+    printf("Kilometer : %.5f\n", convert_number / 100000);
+    return;
+}
+
+void m_to_cm()
+{
+    float convert_number;
+    printf("\nMeter : ");
+    scanf("%f", &convert_number);
+    printf("Centimeter : %.3f\n", convert_number * 100);
+    return;
+}
+
+void m_to_km()
+{
+    float convert_number;
+    printf("\nMeter : ");
+    scanf("%f", &convert_number);
+    printf("Kilometer : %.3f\n", convert_number / 1000);
+    return;
+}
+
+void km_to_cm()
+{
+    float convert_number;
+    printf("\nKilometer  : ");
+    scanf("%f", &convert_number);
+    printf("Centimeter : %.3f\n", convert_number * 100000);
+    return;
+}
+
+void km_to_m()
+{
+    float convert_number;
+    printf("\nKilometer : ");
+    scanf("%f", &convert_number);
+    printf("Meter     : %.3f\n", convert_number * 1000);
+    return;
+}
+
+void length()
+{
+    int length_number;
+
+    while (1)
+    {
+        printf("\n1.Centimeter to Meter\n2.Centimeter to Kilometer\n3.Meter to Centimeter\n4.Meter to Kilometer\n5.Kilometer to Centimeter\n6.Kilometer to Meter\n7.Main Menu\n8.Exit\n");
+        printf("\nEnter your choice: ");
+        scanf("%d", &length_number);
+        switch (length_number)
+        {
+        case 1:
+            cm_to_m();
+            break;
+        case 2:
+            cm_to_km();
+            break;
+        case 3:
+            m_to_cm();
+            break;
+        case 4:
+            m_to_km();
+            break;
+        case 5:
+            km_to_cm();
+            break;
+        case 6:
+            km_to_m();
+            break;
+        case 7:
+            main();
+            break;
+        case 8:
+            exit(0);
+            break;
+        default:
+            printf("Invalid choice");
+        }
+    }
+}
+float cel_to_fah()
+{
+    float cels, fahr;
+    printf("\nCelsius : ");
+    scanf("%f", &cels);
+    fahr = (cels * 1.8) + 32;
+    printf("\nFahrenheit %.2f:", fahr);
+    return fahr;
+}
+
+void cel_to_kel()
+{
+    float cels, kelv;
+    printf("\nCelsius : ");
+    scanf("%f", &cels);
+    kelv = cels + 273.15;
+    printf("\nKelvin:%.2f", kelv);
+}
+
+float fah_to_cel()
+{
+    float cels, fahr;
+    printf("\nFahrenheit : ");
+    scanf("%f", &fahr);
+    cels = (fahr - 32) * .5556;
+    printf("\nCelsius:%.2f", cels);
+    return cels;
+}
+
+float fah_to_kel()
+{
+    float fahr, kelv;
+    printf("\nFahrenheit : ");
+    scanf("%f", &fahr);
+    kelv = (fahr + 459.67) * 5 / 9;
+    printf("\nKelvin:", kelv);
+    return kelv;
+}
+
+float kel_to_cel()
+{
+    float kelv, cels;
+    printf("\nKelvin : ");
+    scanf("%f", &kelv);
+    cels = kelv - 273.15;
+    printf("\nCelsius:", cels);
+    return cels;
+}
+
+float kel_to_fah()
+{
+    float kelv, fahr;
+    printf("\nKelvin : ");
+    scanf("%f", &kelv);
+    fahr = kelv * 9 / 5 - 459.67;
+    printf("\nFahrenheit:", fahr);
+    return fahr;
+}
+void temp_conv()
+{
+    int temp_num;
+    while (1)
+    {
+        printf("\n1.Celsius to Kelvin Conversion\n2.Celsius to Fahrenheit conversion\n3.Fahrenheit to Celsius conversion\n4.Kelvin to Celsius conversion\n5.Fahrenheit to Kelvin conversion\n6.Kelvin to Fahrenheit conversion\n7.Main menu\n8.Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &temp_num);
+        switch (temp_num)
+        {
+        case 1:
+            cel_to_kel();
+            break;
+        case 2:
+            cel_to_fah();
+            break;
+        case 3:
+            fah_to_cel();
+            break;
+        case 4:
+            kel_to_cel();
+            break;
+        case 5:
+            fah_to_kel();
+            break;
+        case 6:
+            kel_to_fah();
+            break;
+        case 7:
+            main();
+            break;
+        case 8:
+            exit(0);
+        default:
+            printf("Invalid entry");
+        }
+    }
+}
+float binarytodecimal()
+{
+    int n;
+    int binary, decimal = 0, base = 1, r;
+
+    binary = n;
+    printf("Enter Binary number: ");
+    scanf("%d", &n);
+    while (n > 0)
+    {
+        r = n % 10;
+        decimal = decimal + r * base;
+        n = n / 10;
+        base = base * 2;
+    }
+    printf("The decimal number is %d\n", decimal);
+    return decimal;
+}
+char binarytohexadecimal()
+{
+    int binaryval;
+    long int hexadecimalval = 0, i = 1, remainder;
+    printf("Enter Binary number: ");
+    scanf("%d", &binaryval);
+    while (binaryval != 0)
+    {
+        remainder = binaryval % 10;
+        hexadecimalval = hexadecimalval + remainder * i;
+        i = i * 2;
+        binaryval = binaryval / 10;
+    }
+    printf("The Hexadecimal number is %d\n", hexadecimalval);
+    return hexadecimalval;
+}
+void num_conv()
+{
+    int chn;
+    printf("\n1.Binary to Hexadecimal Conversion\n2.Binary to Decimal conversion\n3.Main menu\n4.Exit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &chn);
+    while (1)
+    {
+        switch (chn)
+        {
+        case 1:
+            binarytohexadecimal();
+            break;
+        case 2:
+            binarytodecimal();
+            break;
+        case 3:
+            main();
+            break;
+        case 4:
+            exit(0);
+        default:
+            printf("Invalid entry");
+        }
+    }
+}
+struct poly
+{
+    int cf, px, py, pz, flag;
+    struct poly *next;
+};
+typedef struct poly node;
+
+node *getnode()
+{
+    node *new1;
+    new1 = (node *)malloc(sizeof(node));
+    new1->next = new1;
+    return new1;
+}
+
+void display(node *head)
+{
+    node *temp = head->next;
+    if (head->next == head)
+    {
+        printf("Polynomial does not exist\n");
+        return;
+    }
+
+    while (temp != head)
+    {
+        printf("\n %d x^%d y^%d z^%d", temp->cf, temp->px, temp->py, temp->pz);
+        if (temp->next != head)
+            printf(" + ");
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
+node *insert_rear(int f, int x, int y, int z, node *head)
+{
+    node *new1, *temp;
+    new1 = getnode();
+    new1->cf = f;
+    new1->px = x;
+    new1->py = y;
+    new1->pz = z;
+    new1->flag = 0;
+    temp = head->next;
+    while (temp->next != head)
+    {
+        temp = temp->next;
+    }
+    temp->next = new1;
+    new1->next = head;
+    return head;
+}
+
+node *read_poly(node *head)
+{
+    int px, py, pz, cf, ch;
+    do
+    {
+        printf("\nEnter coeff: ");
+        scanf("%d", &cf);
+        printf("\nEnter x, y, z powers(0-indiacate NO term): ");
+        scanf("%d%d%d", &px, &py, &pz);
+        head = insert_rear(cf, px, py, pz, head);
+        printf("\nIf you wish to continue press 1 otherwise 0: ");
+        scanf("%d", &ch);
+    } while (ch != 0);
+    return head;
+}
+
+node *add_poly(node *h1, node *h2, node *h3)
+{
+    node *p1, *p2;
+    p1 = h1->next;
+
+    while (p1 != h1)
+    {
+        p2 = h2->next;
+        while (p2 != h2)
+        {
+            if (p1->px == p2->px && p1->py == p2->py && p1->pz == p2->pz)
+            {
+                h3 = insert_rear(p1->cf + p2->cf, p2->px, p2->py, p2->pz, h3);
+                p1->flag = 1;
+                p2->flag = 1;
+                break;
+            }
+            p2 = p2->next;
+        }
+
+        if (p1->flag == 0)
+        {
+            h3 = insert_rear(p1->cf, p1->px, p1->py, p1->pz, h3);
+        }
+        p1 = p1->next;
+    }
+
+    p2 = h2->next;
+
+    while (p2 != h2)
+    {
+        if (p2->flag == 0)
+        {
+            h3 = insert_rear(p2->cf, p2->px, p2->py, p2->pz, h3);
+        }
+        p2 = p2->next;
+    }
+    return (h3);
+}
+
+void evaluate(node *he)
+{
+    node *temp = he;
+    int x, y, z;
+    float result = 0.0;
+    printf("\nEnter x, y, z, terms to evaluate:\n");
+    scanf("%d%d%d", &x, &y, &z);
+    temp = temp->next;
+    while (temp != he)
+    {
+        result = result + (temp->cf * pow(x, temp->px) * pow(y, temp->py) * pow(z, temp->pz));
+        temp = temp->next;
+    }
+    printf("\nPolynomial result is: %f", result);
+}
+
+struct complex
+{
+    int real, img;
+};
+void transpose()
+{
+    int m, n, i, j, matrix[10][10], transpose[10][10];
+    printf("Enter rows and columns :\n");
+    scanf("%d%d", &m, &n);
+    printf("Enter elements of the matrix\n");
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+            scanf("%d", &matrix[i][j]);
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+            transpose[j][i] = matrix[i][j];
+    printf("Transpose of the matrix:\n");
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < m; j++)
+            printf("%d\t", transpose[i][j]);
+        printf("\n");
+    }
+}
+void sparse()
+{
+    int row, col, i, j, a[10][10], count = 0;
+    printf("Enter the number of rows:\n");
+    scanf("%d", &row);
+    printf("Enter the number of Columns:\n");
+    scanf("%d", &col);
+    printf("Enter elements of the Matrix:\n");
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Elements are:\n");
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            printf("%d\t", a[i][j]);
+        }
+        printf("\n");
+    }
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            if (a[i][j] == 0)
+                count++;
+        }
+    }
+    if (count > ((row * col) / 2))
+        printf("Matrix is a sparse matrix \n");
+    else
+        printf("Matrix is not sparse matrix\n");
+}
+void matrix_add()
+{
+    int m, n;
+    printf("Enter number of rows: ");
+    scanf("%d", &m);
+    printf("Enter number of columns: ");
+    scanf("%d", &n);
+    float a[m][n], b[m][n], c[m][n];
+    int i, j;
+    printf("Enter the elements of 1st matrix\n");
+
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+            scanf("%f", &a[i][j]);
+        }
+    printf("Enter the elements of 2nd matrix\n");
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+            scanf("%f", &b[i][j]);
+        }
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+
+            c[i][j] = a[i][j] + b[i][j];
+        }
+    printf("\nSum Of Matrix:");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%f\t", c[i][j]);
+        printf("\n");
+    }
+}
+
+void matrix_sub()
+{
+    int m, n;
+    printf("Enter number of rows: ");
+    scanf("%d", &m);
+    printf("Enter number of columns: ");
+    scanf("%d", &n);
+    float a[m][n], b[m][n], c[m][n];
+    int i, j;
+    printf("Enter the elements of 1st matrix\n");
+
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+            scanf("%f", &a[i][j]);
+        }
+    printf("Enter the elements of 2nd matrix\n");
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+            scanf("%f", &b[i][j]);
+        }
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+        {
+
+            c[i][j] = a[i][j] - b[i][j];
+        }
+    printf("\nSum Of Matrix:");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf("%f\t", c[i][j]);
+        printf("\n");
+    }
+}
+
+void matrix_multiply()
+{
+    int i, j, k;
+    int row1, col1, row2, col2, row3, col3;
+    int mat1[10][10], mat2[10][10], mat3[10][10];
+    printf("\n enter the number of rows in the first matrix:");
+    scanf("%d", &row1);
+    printf("\n enter the number of columns in the first matrix:");
+    scanf("%d", &col1);
+    printf("\n enter the number of rows in the second matrix:");
+    scanf("%d", &row2);
+    printf("\n enter the number of columns in the second matrix:");
+    scanf("%d", &col2);
+    if (col1 != row2)
+    {
+        printf("\n The number of columns in the first matrix must be equal to the number of rows in the second matrix ");
+    }
+    row3 = row1;
+    col3 = col2;
+    printf("\n Enter the elements of the first matrix");
+    for (i = 0; i < row1; i++)
+    {
+        for (j = 0; j < col1; j++)
+            scanf("%d", &mat1[i][j]);
+    }
+    printf("\n Enter the elements of the second matrix");
+    for (i = 0; i < row2; i++)
+    {
+        for (j = 0; j < col2; j++)
+            scanf("%d", &mat2[i][j]);
+    }
+    for (i = 0; i < row3; i++)
+    {
+        for (j = 0; j < col3; j++)
+        {
+            mat3[i][j] = 0;
+            for (k = 0; k < col3; k++)
+                mat3[i][j] += mat1[i][k] * mat2[k][j];
+        }
+    }
+    printf("\n The elements of the product matrix are");
+    for (i = 0; i < row3; i++)
+    {
+        printf("\n");
+        for (j = 0; j < col3; j++)
+            printf("\t %d", mat3[i][j]);
+    }
+}
+
+void polToCart()
+{
+    float x, y, r, theta;
+    printf("Enter radius of polar coordinate (r): ");
+    scanf("%f", &r);
+    printf("Enter angle of polar coordinate in degree (theta): ");
+    scanf("%f", &theta);
+    theta = theta * PI / 180.0;
+    x = r * cos(theta);
+    y = r * sin(theta);
+    printf("Cartesian form is: %0.3f + i(%0.3f)", x, y);
+}
+void cartToPol()
+{
+    float x, y, r, theta;
+    printf("Enter Cartesian Co-ordinates x and y\n");
+    scanf("%f%f", &x, &y);
+    r = sqrt(x * x + y * y);
+    theta = atan(y / x);
+    theta = theta * (180.0 / PI);
+    printf("Polar form is %0.2f(cos(%0.2f°) + isin(%0.2f°))", r, theta, theta);
+}
+void conjugate()
+{
+    int x, y;
+    printf("Enter the real part:");
+    scanf("%d", &x);
+    printf("Enter the imaginary part:");
+    scanf("%d", &y);
+    y = -y;
+    printf("The conjugate is: %d+(%d)i", x, y);
+}
+void emi()
+{
+    float principal, rate, time, emi;
+
+    printf("Enter principal: ");
+    scanf("%f", &principal);
+
+    printf("Enter rate: ");
+    scanf("%f", &rate);
+
+    printf("Enter time in year: ");
+    scanf("%f", &time);
+
+    rate = rate / (12 * 100);
+    time = time * 12;
+
+    emi = (principal * rate * pow(1 + rate, time)) / (pow(1 + rate, time) - 1);
+
+    printf("Monthly EMI is= %f\n", emi);
+}
+void simpleinterest()
+{
+    float principle, time, rate, SI;
+    printf("Enter principle amount: ");
+    scanf("%f", &principle);
+    printf("Enter time: ");
+    scanf("%f", &time);
+    printf("Enter rate: ");
+    scanf("%f", &rate);
+    SI = (principle * time * rate) / 100;
+    printf("Simple Interest = %f", SI);
+}
+void CompoundInterest()
+{
+    float principle, rate, time, CI;
+    printf("Enter principle amount: ");
+    scanf("%f", &principle);
+    printf("Enter time: ");
+    scanf("%f", &time);
+    printf("Enter rate: ");
+    scanf("%f", &rate);
+    CI = principle * (pow((1 + rate / 100), time));
+    printf("Compound Interest = %f", CI);
+}
+void bmi()
+{
+    float height, weight, bmi;
+
+    printf("Enter height in meter\n");
+    scanf("%f", &height);
+
+    printf("Enter weight in kg\n");
+    scanf("%f", &weight);
+
+    bmi = weight / (height * height);
+
+    printf("Your Body Mass Index(BMI) is %f\n", bmi);
+
+    if (bmi < 15)
+    {
+        printf("Your BMI category is: Starvation\n");
+    }
+    else if (bmi >= 15.1 && bmi <= 17.5)
+    {
+        printf("Your BMI category is: Anorexic\n");
+    }
+    else if (bmi >= 17.6 && bmi <= 18.5)
+    {
+        printf("Your BMI category is: Underweight\n");
+    }
+    else if (bmi >= 18.6 && bmi <= 24.9)
+    {
+        printf("Your BMI category is: Ideal\n");
+    }
+    else if (bmi >= 25 && bmi <= 29.9)
+    {
+        printf("Your BMI category is: Overweight\n");
+    }
+    else if (bmi >= 30 && bmi <= 39.9)
+    {
+        printf("Your BMI category is: Obese\n");
+    }
+    else if (bmi >= 40)
+    {
+        printf("Your BMI category is: Morbidly Obese\n");
+    }
+    else
+    {
+        printf("Wrong entry\n");
+    }
+}
+void simulEqn()
+{
+    float a, b, c, p, q, r, d[4], x, y;
+    printf("Enter a,b and c values of ax+by=c\n");
+    scanf("%f%f%f", &a, &b, &c);
+    printf("Enter p,q and r of px+qy=r\n");
+    scanf("%f%f%f", &p, &q, &r);
+    if (((a * q) - (p * b)) != 0)
+    {
+        d[0] = (c / a);
+        d[1] = (-1) * (b / a);
+        d[2] = (r / p);
+        d[3] = (-1) * (q / p);
+        y = ((d[2] - d[0]) / (d[1] - d[3]));
+        x = d[0] + (d[1] * y);
+        printf("x=%0.3f\ny=%0.3f\n", x, y);
+    }
+    if (((a * q) - (p * b)) == 0 && ((b * r) - (q * c)) == 0 && ((p * c) - (a * r)) == 0)
+    {
+        if (c / a >= 0)
+            printf("Infinite number of solutions\nX=%fY+%f\n", (-1 * b) / a, c / a);
+        else
+            printf("Infinite number of solutions\nX=%fY%f\n", (-1 * b) / a, c / a);
+    }
+    if (((a * q) - (p * b)) == 0 && ((b * r) - (q * c)) != 0 && ((p * c) - (a * r)) != 0)
+    {
+        printf("No Solutions\n");
+    }
+}
+void sine()
+{
+    double input, output;
+    printf("\nEnter the value angle of sin : ");
+    scanf("%lf", &input);
+    output = sin(input * PI / 180);
+    printf("sin of %.0lf degrees is %.3lf\n\n", input, output);
+    return;
+}
+
+void cosine()
+{
+    double input, output;
+    printf("\nEnter the value angle of cos : ");
+    scanf("%lf", &input);
+    output = cos(input * PI / 180);
+    printf("Cos of %.0lf degrees is %.3lf\n\n", input, output);
+    return;
+}
+void tangent()
+{
+    double input, output;
+    printf("\nEnter the value angle of tan : ");
+    scanf("%lf", &input);
+    output = tan(input * PI / 180);
+    printf("Tan of %.0lf degrees is %.3lf\n\n", input, output);
+    return;
+}
+void cosecant()
+{
+    double input, output;
+    printf("\nEnter the value angle of cosec : ");
+    scanf("%lf", &input);
+    output = 1 / sin(input * PI / 180);
+    printf("cosec of %.0lf degrees is %.3lf\n\n", input, output);
+    return;
+}
+void secant()
+{
+    double input, output;
+    printf("\nEnter the value angle of sec : ");
+    scanf("%lf", &input);
+    output = 1 / cos(input * PI / 180);
+    printf("sec of %.0lf degrees is %.3lf\n\n", input, output);
+    return;
+}
+void cotangent()
+{
+    double input, output;
+    printf("\nEnter the value angle of cot : ");
+    scanf("%lf", &input);
+    output = 1 / tan(input * PI / 180);
+    printf("cot of %.0lf degrees is %.3lf\n\n", input, output);
+    return;
+}
+
+void taka_to_dollar()
+{
+    float convert_number;
+    printf("\nBangladeshi Taka : ");
+    scanf("%f", &convert_number);
+    printf("US Dollar   : %.2f\n\n", convert_number * 0.0122133);
+    return;
+}
+
+void taka_to_euro()
+{
+    float convert_number;
+    printf("\nBangladeshi Taka : ");
+    scanf("%f", &convert_number);
+    printf("Euro        : %.3f\n\n", convert_number * 0.0103774);
+    return;
+}
+
+void dollar_to_taka()
+{
+    float convert_number;
+    printf("\nUS Dollar    : ");
+    scanf("%f", &convert_number);
+    printf("Bangladeshi Taka : %10.f\n\n", 81.8783 * convert_number);
+    return;
+}
+
+void dollar_to_euro()
+{
+    float convert_number;
+    printf("\nUS Dollar     : ");
+    scanf("%f", &convert_number);
+    printf("Euro      : %.3f\n\n", convert_number * 0.848139);
+    return;
+}
+
+void euro_to_taka()
+{
+    float convert_number;
+    printf("\nEuro       : ");
+    scanf("%f", &convert_number);
+    printf("Bangladeshi Taka : %.3f\n\n", convert_number * 96.4136);
+    return;
+}
+
+void euro_to_dollar()
+{
+    float convert_number;
+    printf("\nEuro     : ");
+    scanf("%f", &convert_number);
+    printf("US Dollar : %f\n\n", convert_number * 1.17905);
+    return;
+}
+int currency()
+{
+    system("cls");
+    int currency_number;
+    printf("\nPress 1 to Convert Bangladeshi Taka to US Dollar");
+    printf("\nPress 2 to Convert Bangladeshi Taka to Euro");
+    printf("\nPress 3 to Convert US Dollar to Bangladeshi Taka");
+    printf("\nPress 4 to Convert US Dollar to Euro");
+    printf("\nPress 5 to Convert Euro to Bangladeshi Taka");
+    printf("\nPress 6 to Convert Euro to US Dollar");
+    printf("\nPress 7 for main Menu");
+    printf("\nPress 8 to Exit");
+    printf("\nEnter Your Choice to Continue...");
+    scanf("%d", &currency_number);
+    while (currency_number > 0 && currency_number < 8)
+    {
+        switch (currency_number)
+        {
+        case 1:
+            taka_to_dollar();
+
+            break;
+        case 2:
+            taka_to_euro();
+
+            break;
+        case 3:
+            dollar_to_taka();
+
+            break;
+        case 4:
+            dollar_to_euro();
+
+            break;
+        case 5:
+            euro_to_taka();
+
+            break;
+        case 6:
+            euro_to_dollar();
+
+            break;
+        case 7:
+            main();
+
+            break;
+        case 8:
+            exit(0);
+            break;
+        default:
+            break;
+        }
+        printf("\nPress 1 to Convert Bangladeshi Taka to US Dollar");
+        printf("\nPress 2 to Convert Bangladeshi Taka to Euro");
+        printf("\nPress 3 to Convert US Dollar to Bangladeshi Taka");
+        printf("\nPress 4 to Convert US Dollar to Euro");
+        printf("\nPress 5 to Convert Euro to Bangladeshi Taka");
+        printf("\nPress 6 to Convert Euro to US Dollar");
+        printf("\nPress 7 for main Menu");
+        printf("\nPress 8 to Exit");
+        printf("\nEnter Your Choice to Continue...");
+        scanf("%d", &currency_number);
+    }
+    return 0;
+}
+
+void main()
+{
+    node *h1, *h2, *h3, *he;
+    struct complex a, b, c;
+    int ch, ch1, ch2, ch4, ch5, chm, cht, chp, a1, b1, result, choice, x, y, z, convert_number;
+    double number, p, num;
+    while (1)
+    {
+        printf("\nHello user!\nWelcome to the Multi-purpose Calculator!\n");
+        printf("\n1.Simple Calculator\n2.Scientific Calculator\n3.Conversional calculator\n4.Health-BMI Calculator\n5.Finance related Calculator\n6.Exit\n\nEnter your choice: ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+            while (1)
+            {
+                printf("\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Power\n6.Root\n7.Main menu\n8.Exit\nEnter your choice: ");
+                scanf("%d", &ch1);
+                switch (ch1)
+                {
+                case 1:
+                    printf("\nEnter the first value  : ");
+                    scanf("%d", &a1);
+                    printf("Enter the Second value : ");
+                    scanf("%d", &b1);
+                    result = a1 + b1;
+                    printf("Addition = %d\n\n", result);
+
+                    break;
+                case 2:
+                    printf("\nEnter the first value  : ");
+                    scanf("%d", &a1);
+                    printf("Enter the Second value : ");
+                    scanf("%d", &b1);
+                    result = a1 - b1;
+                    printf("Subtraction = %d\n\n", result);
+
+                    break;
+                case 3:
+                    printf("\nEnter the first value  : ");
+                    scanf("%d", &a1);
+                    printf("Enter the Second value : ");
+                    scanf("%d", &b1);
+                    result = a1 * b1;
+                    printf("Product = %d\n\n", result);
+
+                    break;
+                case 4:
+                    printf("\nEnter the first value  : ");
+                    scanf("%d", &a1);
+                    printf("Enter the Second value : ");
+                    scanf("%d", &b1);
+                    float result = (float)a1 / (float)b1;
+                    printf("Quotient = %.2f\n\n", result);
+
+                    break;
+                case 5:
+                    printf("Enter The Number : ");
+                    scanf("%lf", &number);
+                    printf("Enter The Power : ");
+                    scanf("%lf", &num);
+                    p = pow(number, num);
+                    printf("Result = %.2lf\n\n", p);
+
+                    break;
+                case 6:
+                    printf("Enter The Number : ");
+                    scanf("%lf", &number);
+                    p = sqrt(number);
+                    printf("Result = %.2lf\n\n", p);
+
+                    break;
+                case 7:
+                    main();
+
+                    break;
+                case 8:
+                    exit(0);
+                    break;
+                default:
+                    printf("Invalid number");
+                }
+            }
+            break;
+        case 2:
+            while (1)
+            {
+                printf("\n1.Simple Calculator\n 2.Complex Operation\n 3.Matrix Operations\n 4.Polynomial Operations\n 5.Trigonometric functions\n 6.Simultaneous Equations\n 7.Main menu\n 8.EXIT\n");
+                printf("Choose your choice: ");
+                scanf("%d", &ch2);
+                switch (ch2)
+                {
+                case 1:
+                    while (1)
+                    {
+                        printf("\n1.Addition\n 2.Subtraction\n 3.Mult\n 4.Div\n 5.Power\n 6.Root\n 7.Main menu\n 8.Exit\nChose your choice: ");
+                        scanf("%d", &ch1);
+                        switch (ch1)
+                        {
+                        case 1:
+                            printf("\nEnter the first value  : ");
+                            scanf("%d", &a1);
+                            printf("Enter the Second value : ");
+                            scanf("%d", &b1);
+                            result = a1 + b1;
+                            printf("Addition = %d\n\n", result);
+                            break;
+                        case 2:
+                            printf("\nEnter the first value  : ");
+                            scanf("%d", &a1);
+                            printf("Enter the Second value : ");
+                            scanf("%d", &b1);
+                            result = a1 - b1;
+                            printf("Subtraction = %d\n\n", result);
+
+                            break;
+                        case 3:
+                            printf("\nEnter the first value  : ");
+                            scanf("%d", &a1);
+                            printf("Enter the Second value : ");
+                            scanf("%d", &b1);
+                            result = a1 * b1;
+                            printf("Product = %d\n\n", result);
+
+                            break;
+                        case 4:
+                            printf("\nEnter the first value  : ");
+                            scanf("%d", &a1);
+                            printf("Enter the Second value : ");
+                            scanf("%d", &b1);
+                            float result = (float)a1 / (float)b1;
+                            printf("Quotient = %.2f\n\n", result);
+
+                            break;
+                        case 5:
+                            printf("Enter The Number : ");
+                            scanf("%lf", &number);
+                            printf("Enter The Power : ");
+                            scanf("%lf", &num);
+                            p = pow(number, num);
+                            printf("Result = %.2lf\n\n", p);
+
+                            break;
+                        case 6:
+                            printf("Enter The Number : ");
+                            scanf("%lf", &number);
+                            p = sqrt(number);
+                            printf("Result = %.2lf\n\n", p);
+
+                            break;
+                        case 7:
+                            main();
+
+                            break;
+                        case 8:
+                            exit(0);
+                            break;
+                        default:
+                            printf("Invalid number");
+                        }
+                    }
+                    break;
+                case 2:
+                    while (1)
+                    {
+                        printf("\n1.Add\n");
+                        printf("2.Subtract\n");
+                        printf("3.Multiply\n");
+                        printf("4.Divide\n");
+                        printf("5.Conjugate\n");
+                        printf("6.Polar to Cartesian\n");
+                        printf("7.Cartesian to polar\n");
+                        printf("8.Main Menu\n");
+                        printf("9.EXIT\n");
+                        printf("Enter your choice\n");
+                        scanf("%d", &choice);
+
+                        if (choice == 9)
+                            exit(0);
+                        if (choice == 8)
+                            main();
+
+                        if (choice >= 1 && choice <= 4)
+                        {
+                            printf("Enter a and b where a + ib is the first complex number.");
+                            printf("\na = ");
+                            scanf("%d", &a.real);
+                            printf("b = ");
+                            scanf("%d", &a.img);
+                            printf("Enter c and d where c + id is the second complex number.");
+                            printf("\nc = ");
+                            scanf("%d", &b.real);
+                            printf("d = ");
+                            scanf("%d", &b.img);
+                        }
+                        if (choice == 1)
+                        {
+                            c.real = a.real + b.real;
+                            c.img = a.img + b.img;
+
+                            if (c.img >= 0)
+                                printf("Sum of the complex numbers = %d + %di", c.real, c.img);
+                            else
+                                printf("Sum of the complex numbers = %d %di", c.real, c.img);
+                            break;
+                        }
+                        else if (choice == 2)
+                        {
+                            c.real = a.real - b.real;
+                            c.img = a.img - b.img;
+
+                            if (c.img >= 0)
+                                printf("Difference of the complex numbers = %d + %di", c.real, c.img);
+                            else
+                                printf("Difference of the complex numbers = %d %di", c.real, c.img);
+                            break;
+                        }
+                        else if (choice == 3)
+                        {
+                            c.real = a.real * b.real - a.img * b.img;
+                            c.img = a.img * b.real + a.real * b.img;
+
+                            if (c.img >= 0)
+                                printf("Multiplication of the complex numbers = %d + %di", c.real, c.img);
+                            else
+                                printf("Multiplication of the complex numbers = %d %di", c.real, c.img);
+                            break;
+                        }
+                        else if (choice == 4)
+                        {
+                            if (b.real == 0 && b.img == 0)
+                                printf("Division by 0 + 0i isn't allowed.");
+                            else
+                            {
+                                x = a.real * b.real + a.img * b.img;
+                                y = a.img * b.real - a.real * b.img;
+                                z = b.real * b.real + b.img * b.img;
+
+                                if (x % z == 0 && y % z == 0)
+                                {
+                                    if (y / z >= 0)
+                                        printf("Division of the complex numbers = %d + %di", x / z, y / z);
+                                    else
+                                        printf("Division of the complex numbers = %d %di", x / z, y / z);
+                                }
+                                else if (x % z == 0 && y % z != 0)
+                                {
+                                    if (y / z >= 0)
+                                        printf("Division of two complex numbers = %d + %d/%di", x / z, y, z);
+                                    else
+                                        printf("Division of two complex numbers = %d %d/%di", x / z, y, z);
+                                }
+                                else if (x % z != 0 && y % z == 0)
+                                {
+                                    if (y / z >= 0)
+                                        printf("Division of two complex numbers = %d/%d + %di", x, z, y / z);
+                                    else
+                                        printf("Division of two complex numbers = %d %d/%di", x, z, y / z);
+                                }
+                                else
+                                {
+                                    if (y / z >= 0)
+                                        printf("Division of two complex numbers = %d/%d + %d/%di", x, z, y, z);
+                                    else
+                                        printf("Division of two complex numbers = %d/%d %d/%di", x, z, y, z);
+                                }
+                            }
+                        }
+
+                        else if (choice == 5)
+                        {
+                            conjugate();
+                        }
+                        else if (choice == 6)
+                        {
+                            polToCart();
+                        }
+                        else if (choice == 7)
+                        {
+                            cartToPol();
+                        }
+                        else
+                            printf("Invalid choice.");
+                        exit(0);
+                    }
+                    break;
+                case 3:
+                    while (1)
+                    {
+                        int chm;
+                        printf("\n1.Addition\n 2.Subtraction\n 3.Multiplication\n 4.Transpose\n 5.Sparse form\n 6.Main menu\n 7.Exit\n Chose your choice: ");
+                        scanf("%d", &chm);
+                        switch (chm)
+                        {
+                        case 1:
+                            matrix_add();
+                            break;
+                        case 2:
+                            matrix_sub();
+                            break;
+                        case 3:
+                            matrix_multiply();
+                            break;
+                        case 4:
+                            transpose();
+                            break;
+                        case 5:
+                            sparse();
+                            break;
+                        case 6:
+                            main();
+                        case 7:
+                            exit(0);
+                        default:
+                            printf("Invalid number");
+                        }
+                    }
+                case 4:
+                    while (1)
+                    {
+                        printf("\n1.Evaluate polynomial\n2.Add two polynomials\n3.Main Menu\n4.Exit\n");
+                        printf("Enter your choice: ");
+                        scanf("%d", &chp);
+                        switch (chp)
+                        {
+                        case 1:
+                            he = getnode();
+                            printf("\nEnter polynomial to evaluate:\n");
+                            he = read_poly(he);
+                            display(he);
+                            evaluate(he);
+                            free(he);
+                            break;
+                        case 2:
+                            h1 = getnode();
+                            h2 = getnode();
+                            h3 = getnode();
+                            printf("\nEnter the first polynomial:");
+                            h1 = read_poly(h1);
+                            printf("\nEnter the second polynomial:");
+                            h2 = read_poly(h2);
+                            h3 = add_poly(h1, h2, h3);
+                            printf("\nFirst polynomial is: ");
+                            display(h1);
+                            printf("\nSecond polynomial is: ");
+                            display(h2);
+                            printf("\nThe sum of 2 polynomials is: ");
+                            display(h3);
+                            break;
+                        case 3:
+                            main();
+
+                        case 4:
+                            exit(0);
+
+                        default:
+                            printf("\nInvalid entry");
+                        }
+                    }
+
+                case 5:
+                    while (1)
+
+                    {
+                        printf("\n1.Sine\n 2.Cos \n 3.Tan\n 4.Cosec\n 5.Sec\n 6.Cot\n 7.Main menu\n 8.EXIT\n");
+                        printf("Choose your choice: ");
+                        scanf("%d", &cht);
+                        switch (cht)
+                        {
+                        case 1:
+                            sine();
+                            break;
+                        case 2:
+                            cosine();
+                            break;
+                        case 3:
+                            tangent();
+                            break;
+                        case 4:
+                            cosecant();
+                            break;
+                        case 5:
+                            secant();
+                            break;
+                        case 6:
+                            cotangent();
+                            break;
+                        case 7:
+                            main();
+                            break;
+                        case 8:
+                            exit(0);
+                            break;
+                        default:
+                            printf("Invalid number\n");
+                        }
+                    }
+                    break;
+                case 6:
+                    simulEqn();
+                    break;
+                case 7:
+                    main();
+                case 8:
+                    exit(0);
+                default:
+                    printf("Invalid choice\n");
+                }
+            case 3:
+                while (1)
+                {
+                    printf(" \n1.Length conversion\n 2.Mass conversion\n 3.Time conversion\n4.Temperature conversion\n5.Currency conversion\n6.Energy conversion\n7.Speed conversion\n8.Number System conversion\n9.Main Menu\n 10.EXIT\n");
+                    printf("Enter your choice: ");
+                    scanf("%d", &ch4);
+                    switch (ch4)
+                    {
+                    case 1:
+                        length();
+                        break;
+                    case 2:
+                        mass();
+                        break;
+                    case 3:
+                        time_conv();
+                        break;
+                    case 4:
+                        temp_conv();
+                        break;
+                    case 5:
+                        currency();
+                        break;
+                    case 6:
+                        energy();
+                        break;
+                    case 7:
+                        speed();
+                        break;
+                    case 8:
+                        num_conv();
+                        break;
+                    case 9:
+                        main();
+                        break;
+                    case 10:
+                        exit(0);
+                        break;
+                    default:
+                        printf("Invalid choice\n");
+                    }
+                }
+                break;
+
+            case 4:
+                bmi();
+                break;
+            case 5:
+                while (1)
+                {
+                    printf("\n1.Simple Interest\n 2.Compound Interest\n 3.EMI\n 4.Main Menu\n 5.EXIT\nChose your choice: ");
+                    scanf("%d", &ch5);
+                    switch (ch5)
+                    {
+                    case 1:
+                        simpleinterest();
+                        break;
+                    case 2:
+                        CompoundInterest();
+                        break;
+                    case 3:
+                        emi();
+                        break;
+                    case 4:
+                        main();
+                    case 5:
+                        exit(0);
+                    default:
+                        printf("Invalid choice");
+                    }
+                }
+                break;
+            case 6:
+                exit(0);
+            default:
+                printf("Invalid choice");
+            }
+        }
+    }
+}
